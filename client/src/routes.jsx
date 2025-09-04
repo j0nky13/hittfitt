@@ -3,7 +3,7 @@ import Home from './pages/Home.jsx'
 import Meals from './pages/Meals.jsx'
 import Move from './pages/Move.jsx'
 import About from './pages/About.jsx'
-import Success from './pages/CSuccess.jsx'
+import Success from './pages/Success.jsx'
 import Cancel from './pages/Cancel.jsx'
 
 export default function RoutesIndex() {
