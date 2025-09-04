@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom'
-import Home from './pages/home'
-import Meals from './pages/meals'
-import Move from './pages/move'
-import About from './pages/about'
-import Success from './pages/success'
-import Cancel from './pages/cancel'
+import Home from './pages/home.jsx'
+import Meals from './pages/meals.jsx'
+import Move from './pages/move.jsx'
+import About from './pages/about.jsx'
+import Success from './pages/success.jsx'
+import Cancel from './pages/cancel.jsx'
 
 export default function RoutesIndex() {
   return (
