@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 
-const NavItem = ({ to, children }) => (
-  <NavLink to={to} className={({isActive}) =>
+const NavItem = ({ to, children, onClick }) => (
+  <NavLink to={to} onClick={onClick} className={({isActive}) =>
     `block px-4 py-3 rounded-xl ${isActive ? 'bg-seafoam/60 text-zinc-900' : 'hover:bg-seafoam/30'}`
   }>{children}</NavLink>
 )
@@ -29,7 +29,13 @@ export default function Navbar() {
             <div className="w-4 h-[2px] bg-zinc-900 mb-1" />
             <div className="w-6 h-[2px] bg-zinc-900" />
           </button>
-          <div className="font-bold tracking-tight">HITTFITT</div>
+          <NavLink to="/" className="flex items-center">
+            <img
+              src="/hittfitt-logo.png"
+              alt="HittFitt logo"
+              className="h-32 w-auto"
+            />
+          </NavLink>
           <div />
         </div>
       </header>
@@ -51,15 +57,23 @@ export default function Navbar() {
         }`}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="p-4">
-          <div className="text-2xl font-extrabold">HITTFITT</div>
-          <p className="text-sm text-zinc-600 mt-1">Move & Meals with Morgan</p>
+        <div className="px-4 pt-2 pb-1 flex flex-col items-center text-center">
+          <img
+            src="/hittfitt-logo.png"
+            alt="HittFitt logo"
+            className="max-h-28 w-auto mx-auto"
+          />
+          <p className="mt-1 text-[13px] font-medium tracking-wide text-zinc-800">Health + Fitness</p>
+          <p className="mt-0.5 text-[12px] leading-snug text-zinc-600">
+            Fuel Your Body. Build Your Results. <span className="italic">Live HittFitt.</span>
+          </p>
+          <div className="mt-2 border-t border-zinc-300/80" />
         </div>
         <nav className="px-2 py-2 space-y-1">
-          <NavItem to="/">Home</NavItem>
-          <NavItem to="/meals">Meals with Morgan</NavItem>
-          <NavItem to="/move">Move with Morgan</NavItem>
-          <NavItem to="/about">About</NavItem>
+          <NavItem to="/" onClick={() => setOpen(false)}>Home</NavItem>
+          <NavItem to="/meals" onClick={() => setOpen(false)}>Meals with Morgan</NavItem>
+          <NavItem to="/move" onClick={() => setOpen(false)}>Move with Morgan</NavItem>
+          <NavItem to="/about" onClick={() => setOpen(false)}>About</NavItem>
         </nav>
 
         <div className="mt-4 border-t border-zinc-300" />
