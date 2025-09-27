@@ -1,3 +1,4 @@
+import { FaTiktok, FaInstagram } from 'react-icons/fa'
 import { useState, useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -71,21 +72,27 @@ export default function Navbar() {
         </div>
         <nav className="px-2 py-2 space-y-1">
           <NavItem to="/" onClick={() => setOpen(false)}>Home</NavItem>
-          <NavItem to="/meals" onClick={() => setOpen(false)}>Meals with Morgan</NavItem>
-          <NavItem to="/move" onClick={() => setOpen(false)}>Move with Morgan</NavItem>
+          {/* <NavItem to="/meals" onClick={() => setOpen(false)}>Meals with Morgan</NavItem> */}
+          <NavItem to="/move" onClick={() => setOpen(false)}>HittFitt Program</NavItem>
           <NavItem to="/about" onClick={() => setOpen(false)}>About</NavItem>
         </nav>
 
         <div className="mt-4 border-t border-zinc-300" />
         <div className="p-4 space-y-2">
-          <a href="https://tiktok.com/" target="_blank" className="block text-sm underline">TikTok</a>
-          <a href="https://instagram.com/" target="_blank" className="block text-sm underline">Instagram</a>
+          <a href="https://tiktok.com/@mohittaaa" target="_blank" className="flex items-center gap-2 text-sm underline">
+            <FaTiktok className="h-4 w-4" />
+            TikTok
+          </a>
+          <a href="https://instagram.com/mohittaaa" target="_blank" className="flex items-center gap-2 text-sm underline">
+            <FaInstagram className="h-4 w-4" />
+            Instagram
+          </a>
         </div>
 
         <div className="mt-auto p-4">
-          <a href="#buy" onClick={()=>setOpen(false)}
+          <a href="#consult" onClick={() => setOpen(false)}
              className="w-full inline-flex justify-center items-center rounded-xl bg-rustic text-white px-4 py-3 font-semibold">
-            Get the $5 PDF
+            Start Consult
           </a>
         </div>
       </aside>
