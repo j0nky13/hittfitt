@@ -7,7 +7,7 @@ const QA = ({ q, a }) => (
 
 export default function FAQ() {
   const faqs = [
-    { q: 'What’s inside the $5 PDF?', a: 'A few go-to meals with a simple grocery list and basic macros so you can start today.' },
+    
     { q: 'What do I get for $19?', a: 'A weekly custom plan (meals + workouts) tailored to your schedule and gear, delivered by email.' },
     { q: 'Do I need equipment?', a: 'Minimal gear is fine. Bodyweight options included; we’ll adapt to what you have.' },
     { q: 'Refunds?', a: 'If the plan isn’t a fit in the first 7 days, reply to the email for help.' }
